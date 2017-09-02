@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\ImageNotFoundException;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -13,7 +14,7 @@ class ImageController
 		$path = storage_path("app/{$filename}");
 
 		if (!file_exists($path)) {
-			abort_if(404, 'Image not found');
+			throw new ImageNotFoundException($filename);
 		}
 
 		$file = $manager->make($path);

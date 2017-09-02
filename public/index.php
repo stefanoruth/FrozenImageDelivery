@@ -83,7 +83,7 @@ $app->register(Intervention\Image\ImageServiceProvider::class);
 |
 */
 
-$app->get('{image}', App\ImageController::class);
+$app->get('{any:.*}', App\ImageController::class);
 
 /*
 |--------------------------------------------------------------------------

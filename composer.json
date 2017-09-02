@@ -11,20 +11,10 @@
         "intervention/image": "^2.4",
         "intervention/imagecache": "^2.3"
     },
-    "require-dev": {
-        "fzaninotto/faker": "~1.4",
-        "phpunit/phpunit": "~5.0",
-        "mockery/mockery": "~0.9"
-    },
     "autoload": {
         "psr-4": {
             "App\\": "app/"
         }
-    },
-    "autoload-dev": {
-        "classmap": [
-            "tests/"
-        ]
     },
     "scripts": {
         "post-root-package-install": [
